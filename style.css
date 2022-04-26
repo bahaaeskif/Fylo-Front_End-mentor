@@ -1,3 +1,4 @@
+
 :root {
     /* primary color */
     --Dark-Blue: hsl(243, 87%, 12%);
@@ -42,6 +43,11 @@ header .container{
     margin-bottom: 0;
     padding: 0;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .logo img{
     width: 120px;
 }
@@ -74,7 +80,8 @@ header .container{
 
 
 .landing-1 > h1{
-    line-height: 33px;
+    line-height: 26px;
+    font-size: 17px;
 }
 .first-section .container .landing-1img img {
      width: 100%;
@@ -261,6 +268,7 @@ header .container{
         flex-direction: row;
         align-items: center;
         gap:5%;
+        position: relative;
     }
     
     .logo {
@@ -274,11 +282,39 @@ header .container{
     .links {
         flex-basis: 70%;
         flex: 1;
-
     }
+    .links::after{
+        content: "";
+        position: absolute;
+        right: 12px;
+        background-color: black;
+        width: 10%;
+        height: 9%;
+        bottom: 6px;
+    }
+    .links::before{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 12px;
+        background-color: black;
+        width: 10%;
+        height: 9%;
+    }
+    .logo::before{
+        content: "";
+        position: absolute;
+        top: 41%;
+        right: 12px;
+        background-color: black;
+        width: 10%;
+        height: 9%;
+    }
+
     .links ul{
         flex-basis: 100%;
         margin-top: 0;
+        display: none !important;
     }
     .links ul li {
         flex-basis: 33.3%;
@@ -394,7 +430,7 @@ header .container{
         position: absolute;
         width: 100%;
         height: 55px;
-        background-image: url(images/bg-curve-mobile.svg);
+        background-image: url(../images/bg-curve-mobile.svg);
         background-position: center center;
         background-repeat: no-repeat;
         top: -50px;
