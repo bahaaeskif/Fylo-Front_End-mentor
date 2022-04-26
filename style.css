@@ -260,6 +260,24 @@ header .container{
         text-align: center;
     }
     
+    header .span{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    header .span span{
+        height: 3px;
+        margin-top: 2.5px;
+        margin-bottom: 2.5px;
+        width: 50%;
+        background-color: var(--Dark-Blue);
+    }
+
     .first-section .container{
         flex-direction: column-reverse;
     }
@@ -268,7 +286,6 @@ header .container{
         flex-direction: row;
         align-items: center;
         gap:5%;
-        position: relative;
     }
     
     .logo {
@@ -283,33 +300,7 @@ header .container{
         flex-basis: 70%;
         flex: 1;
     }
-    .links::after{
-        content: "";
-        position: absolute;
-        right: 12px;
-        background-color: black;
-        width: 10%;
-        height: 9%;
-        bottom: 6px;
-    }
-    .links::before{
-        content: "";
-        position: absolute;
-        top: 5px;
-        right: 12px;
-        background-color: black;
-        width: 10%;
-        height: 9%;
-    }
-    .logo::before{
-        content: "";
-        position: absolute;
-        top: 41%;
-        right: 12px;
-        background-color: black;
-        width: 10%;
-        height: 9%;
-    }
+    
 
     .links ul{
         flex-basis: 100%;
@@ -438,3 +429,11 @@ header .container{
         background-size: cover;
     }  
 }
+
+@media (min-width:757px) {
+    header .span{
+        display: none;
+    }
+}
+
+
